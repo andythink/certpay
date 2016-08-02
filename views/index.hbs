@@ -1,0 +1,30 @@
+    <form id="alipaysubmit" name="alipaysubmit" action="http://111.203.205.26:8085/gateway.do" method="get">
+<!-- 接口 --> <input type="hidden" name="service" value="MOBILE_CERTPAY_H5_ORDER_CREATE"> 
+<!-- 算法 --> <input type="hidden" name="secId" value="RSA">
+<!-- 版本 --> <input type="hidden" name="version" value="3.0.0">
+<!-- 商户号 --> <input type="hidden" name="merchantId" value="M200000250">
+				<label>订单号:</label>
+<!-- 订单号 --> <input type="text" name="outOrderId" value="{{orderid}}" class="width100"> <!-- 可变 -->
+<!-- 用户号 --> <input type="hidden" name="userId" value="500666">
+<!-- 金额 --> <input type="hidden" name="amount" value="100">
+<!-- 跳转地址 --> <input type="hidden" name="returnUrl" value="http://testreturnUrl">
+<!-- 异步通知地址 --> <input type="hidden" name="noticeUrl" value="http://testnoticeUrl">
+<!-- 商品名称 --> <input type="hidden" name="productName" value="充值">
+<!-- 证件类型 --> <input type="hidden" name="cardType" value="1">
+<!-- 身份证号码 --> <input type="hidden" name="cardNo" value="42062119900109121X">
+<!-- 真实姓名 --> <input type="hidden" name="realName" value="潘兴武">
+<!-- 手机号 --> <input type="hidden" name="mobileNo" value="18810528823">
+<!-- 银行名称 --> <input type="hidden" name="bankName" value="民生银行">
+<!-- 银行编码 --> <input type="hidden" name="bankCode" value="CMBC">
+<!-- 银行卡号 --> <input type="hidden" name="bankNo" value="6226200103146602">
+<br>
+			<label>序列&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+<!-- 序列 --> <input type="text" name="reqSn" value="{{reqSn}}" class="width100" > <!-- 可变 -->
+
+<!-- 签名 --> 
+<br>
+<label>签名&nbsp;&nbsp;&nbsp;&nbsp;:</label>
+<input value="{{sign}}" type="text" name="sign" class="width100"> <!-- 可变 -->
+<br>
+<!-- 提交按钮 --> <input type="submit" value="支付" style="">
+    </form>
